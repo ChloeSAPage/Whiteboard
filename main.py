@@ -47,4 +47,16 @@ line_width = 2
 
 window.geometry("800x600")
 
+# Nav Bar and Controls
+controls_frame = tk.Frame(window)
+controls_frame.pack(side="top", fill="x")
+
+color_button = tk.Button(
+    controls_frame, text="Change Colour", command=change_pen_color)
+clear_button = tk.Button(controls_frame, text="Clear Canvas",
+                         command=lambda: canvas.delete("all"))
+
+color_button.pack(side="left", padx=5, pady=5)
+clear_button.pack(side="left", padx=5, pady=5)
+
 window.mainloop()
