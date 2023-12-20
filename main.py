@@ -59,4 +59,14 @@ clear_button = tk.Button(controls_frame, text="Clear Canvas",
 color_button.pack(side="left", padx=5, pady=5)
 clear_button.pack(side="left", padx=5, pady=5)
 
+# Control line width
+line_width_label = tk.Label(controls_frame, text="Line Width:")
+line_width_label.pack(side="left", padx=5, pady=5)
+
+line_width_slider = tk.Scale(controls_frame, from_=1, to=10,
+                             orient="horizontal", command=lambda val: change_line_width(val))
+line_width_slider.set(line_width)
+line_width_slider.pack(side="left", padx=5, pady=5)
+
+
 window.mainloop()
